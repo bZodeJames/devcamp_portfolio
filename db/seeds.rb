@@ -33,3 +33,8 @@ puts "5 skills created"
         )
 end
 puts "9 Portfolio items created"
+
+”http://placehold.it/600x400”
+
+”http://placehold.it/600x400”
+
