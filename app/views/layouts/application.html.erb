@@ -4,7 +4,7 @@
     <title><%= @page_title %></title>
     <meta name="descripton" content=<%= @seo_keywords %> />
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -24,7 +24,7 @@
     
     <div class="footer">
       <hr>
-      <p>This is a footer! Copyright bZode Technologies 2017</p>
+      <%= copyright_generator %>
     </div> 
   </body>
 </html>

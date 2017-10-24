@@ -15,6 +15,9 @@ module ApplicationHelper
             content_tag(:p, greeting, class: "source-greeting")
         end
     end
+    def copyright_generator
+    BzodeViewTool::Renderer.copyright 'bZode Technologies', "The ceiling can't hold us, so please don't take my content"
+    end
 end
 
   
