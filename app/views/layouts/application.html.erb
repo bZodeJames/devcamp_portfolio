@@ -12,10 +12,10 @@
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= render "shared/nav", location: 'top' %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+    <%= render "shared/application_nav" %>
 
     <br>
     <%= login_helper %>	
@@ -27,6 +27,9 @@
     <div class="footer">
       <hr>
       <%= copyright_generator %>
-    </div> 
+    </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
