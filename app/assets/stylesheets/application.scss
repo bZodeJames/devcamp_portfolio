@@ -162,3 +162,30 @@ body {
   }
 }
 
+/*
+ * Custom Styles
+ */
+
+ .card {
+  padding: 15px;
+ }
+
+ .card-block {
+  color: #000;
+  text-align: left;
+ }
+.auth-links a {
+  color: #000000;
+}
+.register-btns {
+  margin: auto;
+}
+.register-links {
+  padding: 0px 12px 0px 12px;
+}
+
+.login > .card {
+  margin: 0 auto;
+  width: 22rem;
+
+}
