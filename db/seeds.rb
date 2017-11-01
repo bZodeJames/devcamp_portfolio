@@ -71,6 +71,15 @@ end
 puts "3 Technologies created"
 
 
+User.create!(
+    email: 'test@test.com',
+    password: "1234567",
+    password_confirmation: "1234567",
+    name: "James Briggs",
+    roles: "site_admin"
+    )
+puts "Admin User Created"
+
 
 
 
