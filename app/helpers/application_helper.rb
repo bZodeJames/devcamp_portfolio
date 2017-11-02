@@ -40,7 +40,11 @@ module ApplicationHelper
             {
                 url: portfolios_path,
                 title: 'Portfolio'
-            },            
+            },
+            {
+                url: utahjazz_path,
+                title: 'Utah Jazz'
+            },
         ]
     end
     def nav_helper style, tag_type

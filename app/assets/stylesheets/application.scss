@@ -214,3 +214,20 @@ body {
 .app-footer {
   color: #ffffff;
 }
+
+.utahjazz {
+  color: #292F33;
+  margin: 15px;
+  text-shadow: none;
+  text-align: left;
+
+  & a {
+    color: #66757F;
+  }
+
+  & .card {
+    border-bottom: 3px solid #55aCEE;
+  }
+  
+}
+
