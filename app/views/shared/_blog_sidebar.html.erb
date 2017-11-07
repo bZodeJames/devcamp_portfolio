@@ -4,6 +4,9 @@
     <p>Welcome to my wonderful blog! I hope that you are able to find some awesome content to learn more about Ruby on Rails, and many other great things! I am seriously obsessed with sharing everything I am learning!</p>
   </div>
 
+  <div>
+    <%= source_helper("alert alert-info blog-sidebar-source") %>
+  </div>
 
   <div class="sidebar-module">
     <h4>Topics</h4>
@@ -11,6 +14,8 @@
         <p><%= link_to topic.title, topic_path(topic) %></p>
      <% end %>
   </div>
+
+  
   
   <div class="sidebar-module">   
     <h4>Find me online:</h4>
