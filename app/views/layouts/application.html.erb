@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <meta name="descripton" content=<%= @seo_keywords %> />
+
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
     <%= csrf_meta_tags %>
     
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,14 +18,14 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
         <%= video_tag(
-            'HardDrivePhotojpeg.mp4',
+            'portfolio-background.jpg',
             id: 'background',
             autoplay: true,
             loop: true,
             muted: true,
-            poster: 'home_bg.png'
+            poster: 'portfolio-background.jpg'
           )
-          %>
+         %>
           <%= render "shared/application_nav" %>
           <br>
           
@@ -31,7 +33,7 @@
             <%= yield %>
 
           <%= render "shared/application_footer" %>  
-          <%= source_helper("application") %>
+          
           <%= alerts %>
         </div>
       </div>
