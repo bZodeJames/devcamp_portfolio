@@ -1,7 +1,7 @@
 <div class="col-sm-8 blog-main">
     <h2><%= @blog.title %></h2>
 
-    <nav class="breadcrumb">
+    <nav class="breadcrumb blog-menu">
       <%= link_to "Home", root_path, class: "breadcrumb-item" %>
       <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb-item" %>
       <span class="breadcrumb-item active"><%= @blog.title %></span>

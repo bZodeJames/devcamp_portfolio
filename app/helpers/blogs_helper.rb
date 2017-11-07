@@ -25,7 +25,17 @@ module BlogsHelper
 
     def blog_status_color blog
        if blog.draft?
-        'color: red;'
+        'color: #000000;'
+       else
+        'color: #ffffff;'
        end
+    end
+
+    def blog_status_toggle blog
+        if blog.draft?
+            "Publish Blog"
+        else
+            "Switch to Draft"
+        end
     end
 end
