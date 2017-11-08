@@ -1,5 +1,8 @@
 {
   "name": "DevcampPortfolio",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "particlesjs": "^2.1.0",
+    "tilt.js": "^1.2.0"
+  }
 }
