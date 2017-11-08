@@ -205,3 +205,65 @@
 .blog-sidebar-source {
   margin-top: 20px;
 }
+
+/*
+* Custom Links
+*/
+
+@mixin gradient-text($gradient, $bg : 'light') {
+  @supports(mix-blend-mode: lighten) {
+    display: inline-block;
+    position: relative;
+    
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      
+      background: unquote($gradient);
+      pointer-events: none;
+    }
+
+    @if ($bg == 'light') {
+      color: #000;
+      background: #fff;
+      mix-blend-mode: multiply;
+
+      &::before {
+        mix-blend-mode: screen;
+      }
+    } @else {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+
+      &::before {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+
+
+section.dark {
+  background: none;
+  
+  .gradient1 {
+    color: #fff; // Fallback color
+    
+    @include gradient-text('linear-gradient(to right, #FFBDB7, #ff7c70, #e23b4a, #FF0505, #F00)', 'dark');
+    float: left;
+  }
+  
+}
+
+
+.gradient1 {
+  font-size: 2em;
+  margin: 0;
+  opacity: 0.9;
+  -ms-transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
