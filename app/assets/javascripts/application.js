@@ -19,6 +19,7 @@
 //= require cable
 //= require popper
 //= require rails-ujs
+//= require particles.min
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets

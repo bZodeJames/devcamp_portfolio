@@ -18,15 +18,8 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-        <%= video_tag(
-            'portfolio-background.jpg',
-            id: 'background',
-            autoplay: true,
-            loop: true,
-            muted: true,
-            poster: 'portfolio-background.jpg'
-          )
-         %>
+        <div id="particles-js">
+          <div id="background"></div>
           
           <br>
           
@@ -36,8 +29,10 @@
           <%= render "shared/application_footer" %>  
           
           <%= alerts %>
+          </div>
         </div>
       </div>
     </div>
+    
   </body>
 </html>
