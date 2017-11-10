@@ -16,7 +16,7 @@ module ApplicationHelper
         end
     end
     def copyright_generator
-        BzodeViewTool::Renderer.copyright 'bZode Technologies', "The ceiling can't hold us"
+        BzodeViewTool::Renderer.copyright 'bZode Technologies', "Major League Coding"
     end
 
     def nav_items
