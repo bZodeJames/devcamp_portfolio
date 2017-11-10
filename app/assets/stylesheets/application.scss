@@ -307,5 +307,7 @@ section.dark {
   transform: rotate(-40deg);
 }
 .particles-js-canvas-el {
-  margin-top: -37%;
+  position: fixed;
+  top: 65px;
+  left: 0;
 }
