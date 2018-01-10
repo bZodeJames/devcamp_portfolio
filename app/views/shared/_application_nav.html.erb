@@ -8,7 +8,11 @@
         <div class="collapse navbar-collapse" id="expand-menu">
           <ul class="navbar-nav ml-auto">
             <%= nav_helper 'nav-link', 'li' %>
-            <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
+            <% if current_user.is_a?(GuestUser) %>
+                    <%= link_to 'Login', new_user_session_path, class: "nav-link"   %> 
+                  <% else user_signed_in? %>
+                    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link"  %>  
+            <% end %>
           </ul>
         </div>
       </div>
