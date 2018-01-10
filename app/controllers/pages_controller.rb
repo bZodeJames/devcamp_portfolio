@@ -1,14 +1,14 @@
 class PagesController < ApplicationController
-  def Home
+  def home
   	@posts = Blog.all.limit(3)
   	@skills = Skill.all
   	@portfolio_items = Portfolio.all.limit(3)
   end
 
-  def About
+  def about
   end
 
-  def Contact
+  def contact
   end
 
   def utahjazz

@@ -1,0 +1,10 @@
+    <div class="blogs">
+        <h1>See what I've been blogging about!</h1>
+        <p>I even enjoy sharing tutorials for new things I have learned while developing!</p>
+            <div class="row features">
+                    <%= render partial: 'shared/blogs_home' %>
+                <div class="col-md-12">
+                    <p><%= link_to "View My Blog", blogs_path, class: 'btn-home-inverse' %></p>
+                </div>
+            </div>
+    </div>

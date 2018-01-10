@@ -285,7 +285,10 @@ p {
 .features {
   margin-top: 2em; 
   p {
-    margin-top: 25px;
+    margin-top: 45px;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 
@@ -295,9 +298,9 @@ p {
     h1 {
       color: #292F33;
   }
-    a {
-      color: #fff;
-    }
+  a:hover {
+    text-decoration: none;
+  }
 }
 .lets-work {
   background: image-url('lets_work.jpg') no-repeat;
@@ -362,4 +365,24 @@ p {
     -o-transition: background 0.6s ease;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
+}
+.btn-custom {
+    color: #292F33 !important;
+    a:hover {
+      color: #fff !important;
+    }
+}
+.btn-home-inverse {
+  margin: 30px 15px;
+  padding: 15px 3em 15px;
+  font-size: 1.25em;
+  color: #292F33;
+  border: 1px solid #292F33;
+  border-radius: 5px;
+       &:hover {
+        transition: color ease-in .25s;
+        transition: background ease-in .25s;
+        background: #292F33;
+        color: #fff;
+       }
 }
