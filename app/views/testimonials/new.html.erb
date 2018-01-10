@@ -1,0 +1,37 @@
+<%= form_with(model: @testimonial, local: true) do |f| %>
+  <% if @testimonial.errors.any? %>
+    <% @testimonial.errors.full_messages.each do |error| %>
+      <%= alert_generator error %>
+      <% end %>
+  <% end %>
+ <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :body %>
+        <%= f.text_field :body, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <label class="btn btn-primary">
+          Upload Image <%= f.file_field :img, style: 'display:none;' %>
+        </label>
+      </div>
+  </div>
+
+  <hr>
+
+    <div class="form-group">
+      <%= f.submit 'Save Testimonial', class: 'btn btn-primary btn-block' %>
+    </div>
+  </div>
+<% end %>

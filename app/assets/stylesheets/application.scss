@@ -190,8 +190,8 @@ p {
   height: auto;
   background-size: cover;
 }
+
 #background {
-  background: image-url('portfolio_background.jpg') no-repeat;
   overflow: hidden;
   min-width: 100%;
   min-height: 100%;
@@ -201,6 +201,32 @@ p {
   background-size: cover;
 }
 
+.home-background {
+  background: image-url('portfolio_background.jpg') no-repeat;
+}
+.about-background {
+  background: image-url('about_me.jpg') no-repeat;
+}
+.about-links {
+  background: image-url('my_desktop.JPG') no-repeat;
+  min-height: 200px !important;
+  bottom: 0;
+  color: #fff;
+    a:hover {
+      text-decoration: none;
+    }
+}
+.my-bio {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.about-links-content {
+  padding: 3em 5em 3em 5em;
+}
+.contact-background {
+  background: image-url('responsive_design.jpg') no-repeat;
+}
 .app-footer {
   color: #ffffff;
 }
@@ -234,6 +260,14 @@ p {
 .card-container {
   margin: 0 auto;
   width: 80%;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.about-content {
+  margin-top: 2em;
 }
 
 .welcome-content {
@@ -316,6 +350,9 @@ p {
         transition: background ease-in .25s;
         background: #fff;
         color: #292F33;
+        a {
+          color: #292F33;
+        }
        }
 }
 
@@ -365,4 +402,34 @@ p {
         background: #292F33;
         color: #fff;
        }
+}
+.connect-with-me, .about-me, .my-background, .development, .testimonials {
+  margin: 10px 0;
+  padding: 2em 5em;
+}
+
+.map {
+  margin: 25px 0 -7px;
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+}
+.my-background, .testimonials {
+  background: #edeeef;
+  width: 100%;
+  margin: 0;
+}
+
+.testimonials {
+  p {
+    text-align: left;
+  }
+}
+.testimonial {
+  border-radius: 145px;
+  border: 5px solid #fff;
+  max-height: 125px;
+}
+.signature {
+  font-weight: bold;
+  text-align: right !important;
 }

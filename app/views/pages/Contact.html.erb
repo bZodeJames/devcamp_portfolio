@@ -1,18 +1,28 @@
-<%= render "shared/application_nav" %>
-<h1>Contact Us</h1>
-
-<hr>
-<div class="row">
-    <div class="col-md-6">
-        <h3>Office Address</h3>
-        <p>11409 S Oakmond Rd<br>South Jordan, UT 84009</p>
-        <h3>Phone</h3>
-        <p>(801) 471-7493</p>
-        <h3>Email</h3>
-        <p><a href="mailto:james@kindledhope.com?subject=PortfolioContact" "email me">Email Me</a></p>
+<div id="background" class="contact-background">
+    <div class="header">
+    <%= render "shared/application_nav" %>
+        <div class="welcome-content">
+            <div class="container">
+                    <p class="lead">I'm always excited to hear from everyone! Whether you're a potential client, wanting to comment on a blog or project I've recently published, have questions, or simply just want to say hello!</p>
+                    <h1 class="cover-heading">Let's Have A Chat!</h1>
+                    <p>
+                        <%= mail_to "james@bzode.com", "Email Me", subject: "Contact from personal portfolio", class: "btn-home" %>
+                        <%= link_to "LinkedIn", 'https://www.linkedin.com/in/briggsjamesm/', class: "btn-home", target: "_blank" %>
+                    </p>
+            </div>
+        </div>
     </div>
+</div>
+<div class="connect-with-me">
+    <h1>More Ways to Connect</h1>
+    <div class="row features">
+        <div class="col-md-12">
+            <h5><%= fa_icon('mobile-phone') %> (801) 900-5836</h5>
 
-    <div class="col-md-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3031.892411365366!2d-112.00664204880924!3d40.54396605571345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528576de18fdcd%3A0x5befa330dc7e8f28!2s11409+Oakmond+Rd%2C+South+Jordan%2C+UT+84095!5e0!3m2!1sen!2sus!4v1508965101255" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
     </div>
-</div>    
+</div>
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193365.80538200046!2d-112.06056915560492!3d40.77652325480215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87523d9488d131ed%3A0x5b53b7a0484d31ca!2sSalt+Lake+City%2C+UT!5e0!3m2!1sen!2sus!4v1515572309302" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<%= render 'footer' %>

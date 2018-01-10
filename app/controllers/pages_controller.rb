@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @testimonials = Testimonial.all
   end
 
   def contact

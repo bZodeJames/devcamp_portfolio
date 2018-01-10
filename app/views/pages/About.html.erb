@@ -1,20 +1,76 @@
-<%= render "shared/application_nav" %>
-<div class="app-card-container card-container">
-<div class="card">
-        <h1>About Me</h1>
-        <hr>
-        <div class="row">
-            <div class="col-md-4">
-                <%= image_tag "profile.jpg", width: 350, alt: "profile image" %>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-7">
-                <p>I first got my start in web development over 7 years ago after wanting to learn HTML/CSS for a family email newsletter. From there my love and passion for development only grew. My first ever website was extremely static, with more inline stlyes than CSS and was only built using HTML and CSS. As my experience grew I went on to discover the ease of building websites with WordPress, but having to work through 100s of templates never seemed to look as good on your own website as they did when you bought them was never much fun.</p> 
-                
-                <p>Before long life took an unexpected turn and I began working more on the marketing aspects of products than any web development beyound basic websites.  I enjoyed just about everything with marketing, the concepts, playing with numbers to decide the best campaigns, or email copy.  Above all I enjoyed working on a regular basis with so many incredible people.</p>
-
-                <p></p>
+<div id="background" class="about-background">
+    <div class="header">
+    <%= render "shared/application_nav" %>
+        <div class="welcome-content">
+            <div class="container">
+                    <p class="lead">Whether it is cheering on my favorite sports team, or developing a new product or feature I diligently seek to work hard, have fun, and exceed expectations.  Feel free to explore a few of my social media accounts to get to know me a bit better.</p>
+                    <h1 class="cover-heading">A little about me!</h1>
+                    <p>
+                        <%= link_to "Instagram", 'https://www.instagram.com/jamesmbriggs', class: "btn-home", target: "_blank" %>
+                        <%= link_to "Twitter", 'https://twitter.com/bZodeJames', class: "btn-home", target: "_blank" %>
+                    </p>
             </div>
         </div>
     </div>
 </div>
+    <div class="about-me">
+        <h1>Who Am I?</h1>
+        <div class="row about-content">
+            <div class="col-lg-4">
+                <%= image_tag "profile.jpg", width: 350, alt: "profile image" %>
+            </div>
+            <div class="col-lg-8 my-bio">
+                <p>I first got my start in web development over 7 years ago after wanting to learn HTML/CSS for a family email newsletter. From there my love and passion for development only grew. My first ever website was extremely static, with more inline stlyes than CSS and was only built using HTML and CSS. As my experience grew I went on to discover the ease of building websites with WordPress, but having to work through 100s of templates never seemed to look as good on your own website as they did when you bought them was never much fun.</p> 
+                        
+                <p>Before long life took an unexpected turn and I began working more on the marketing aspects of products than any web development beyound basic websites.  I enjoyed just about everything with marketing, the concepts, playing with numbers to decide the best campaigns, or email copy.  Above all I enjoyed working on a regular basis with so many incredible people.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="my-background">
+        <h1>Services</h1>
+        <div class="row about-content">
+            <div class="col-md-4">
+                <h4>Web Development</h4>
+                <p>I build a modern website using all of the latest technologies from WordPress, Ruby, and more. I will ensure that your needs are met.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Ruby on Rails</h4>
+                <p>Meet the power of Ruby on Rails. Have your custom web application built out and completely customized to your needs!</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Marketing</h4>
+                <p>Whether it is setting up funnels, email campaigns, or other marketing needs! I will help target your goals and audience!</p>
+            </div>
+        </div>
+    </div>
+    <div id="background" class="about-links">
+        <div class="header about-links-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><%= link_to "My Resume", about_path, class: "btn-home" %></p>
+                    <br><br>
+                    <p><%= link_to "My Portfolio", portfolios_path, class: "btn-home" %></p>
+                </div>
+                <div class="col-md-8">
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials">
+        <h1>Testimonials</h1>
+        <div class="row about-content">
+            <% @testimonials.each do |testimonial| %>
+               <div class="col-md-2">
+                    <%= image_tag "tania_testimonial.jpg", alt: "Testimonial Image", class: "testimonial" %>
+               </div>
+               <div class="col-md-10">
+                    <p><%= testimonial.body %></p>
+                    <p class="signature">- <%= testimonial.name %><br><%= testimonial.title %></p>
+               </div>
+            <% end %>
+        </div>
+    </div>
+<%= render 'footer' %>
