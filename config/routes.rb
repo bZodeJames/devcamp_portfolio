@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
    
-  get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  get 'about', to: 'pages#About'
+  get 'contact', to: 'pages#Contact'
   get 'utahjazz', to: 'pages#utahjazz'
 
   resources :blogs do 
@@ -20,5 +20,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   mount ActionCable.server => '/cable'
   
-  root to: 'pages#home'
+  root to: 'pages#Home'
 end
