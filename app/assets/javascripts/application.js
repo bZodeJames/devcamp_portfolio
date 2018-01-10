@@ -13,14 +13,13 @@
 
 //= require jquery3
 //= require jquery-ui
+//= require popper
+//= require rails-ujs
 //= require html.sortable
 //= require scroll
 //= require cocoon
 //= require gritter
 //= require cable
-//= require popper
-//= require rails-ujs
-//= require particles.min
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
