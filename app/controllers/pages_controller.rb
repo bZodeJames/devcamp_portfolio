@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def Home
-  	@posts = Blog.all.limit(3)
+  	@posts = Blog.all.order("created_at DESC").limit(3)
   	@skills = Skill.all
-  	@portfolio_items = Portfolio.all.limit(3)
+  	@portfolio_items = Portfolio.all.order("created_at DESC").limit(3)
   end
 
   def About
