@@ -1,0 +1,14 @@
+<% @posts.each do |blog| %>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-block">
+            <h3 class="card-title"><%= blog.title.titleize %></h3>
+                <div class="card-text">
+                    <p><%= truncate(blog.body, :length => 250) %></p>
+                    <%= link_to "Read More", blog, class: "btn btn-info" %> 
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
+    

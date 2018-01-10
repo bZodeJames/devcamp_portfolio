@@ -14,6 +14,7 @@
 //= require jquery3
 //= require jquery-ui
 //= require html.sortable
+//= require scroll
 //= require cocoon
 //= require gritter
 //= require cable

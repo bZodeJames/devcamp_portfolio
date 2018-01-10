@@ -1,14 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-dark primary-nav">
+<nav class="navbar navbar-expand-lg navbar-inverse fixed-top" id="header" >
       <div class="container">
-        <a href="/" class="nav-link mr-auto">James Briggs</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <a href="/" class="nav-link mr-auto"><%= image_tag "james_logo_light.png", width: "175" %></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#expand-menu" aria-controls="expand-menu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExample07">
+        <div class="collapse navbar-collapse" id="expand-menu">
           <ul class="navbar-nav ml-auto">
             <%= nav_helper 'nav-link', 'li' %>
-            <%= login_helper 'nav-link' %>
+            <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
           </ul>
         </div>
       </div>

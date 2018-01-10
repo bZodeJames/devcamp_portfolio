@@ -14,25 +14,13 @@
   </head>
 
   <body>
-  <%= render "shared/application_nav" %>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-        <div id="particles-js">
-          <div id="background"></div>
-          
-          <br>
-          
-
-            <%= yield %>
-
-          <%= render "shared/application_footer" %>  
-          
-          <%= alerts %>
-          </div>
-        </div>
-      </div>
-    </div>
     
+          
+    <%= yield %>
+
+    
+    
+    <%= alerts %>
+
   </body>
 </html>

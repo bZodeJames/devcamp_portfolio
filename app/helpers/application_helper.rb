@@ -16,10 +16,10 @@ module ApplicationHelper
         end
     end
     def copyright_generator
-        BzodeViewTool::Renderer.copyright 'bZode Technologies', "Major League Coding"
+        BzodeViewTool::Renderer.copyright 'James Matthew Briggs', "and respective companies"
     end
 
-    def nav_items
+    def nav_items 
         [
             {
                 url: root_path,
@@ -40,11 +40,7 @@ module ApplicationHelper
             {
                 url: portfolios_path,
                 title: 'Portfolio'
-            },
-            {
-                url: utahjazz_path,
-                title: 'Utah Jazz'
-            },
+            },    
         ]
     end
     def nav_helper style, tag_type
@@ -69,7 +65,7 @@ module ApplicationHelper
     end
 
     def alert_generator msg
-        js add_gritter(msg, :title => "Message from God!", :sticky => false)
+        js add_gritter(msg, :title => "Message from jamesmbriggs.com", :sticky => false)
     end
 
 end
