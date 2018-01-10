@@ -161,65 +161,25 @@
 * Custom Links
 */
 
-@mixin gradient-text($gradient, $bg : 'light') {
-  @supports(mix-blend-mode: lighten) {
-    display: inline-block;
-    position: relative;
-    
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      
-      background: unquote($gradient);
-      pointer-events: none;
-    }
-
-    @if ($bg == 'light') {
-      color: #000;
-      background: #fff;
-      mix-blend-mode: multiply;
-
-      &::before {
-        mix-blend-mode: screen;
-      }
-    } @else {
-      color: #fff;
-      background: #000;
-      mix-blend-mode: lighten;
-
-      &::before {
-        mix-blend-mode: multiply;
-      }
-    }
+#header {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  &.--not-top {
+    background: #1d2025;
+    transition: background 0.6s ease;
+    -webkit-transition: background 0.6s ease;
+    -moz-transition: background 0.6s ease;
+    -o-transition: background 0.6s ease;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
 }
 
-
-section.dark {
-  background: none;
-  
-  .gradient1 {
-    color: #fff; // Fallback color
-    
-    @include gradient-text('linear-gradient(to right, #FFBDB7, #ff7c70, #e23b4a, #FF0505, #F00)', 'dark');
-    float: left;
-  }
-  
+.white {
+  color: #fff;
 }
-
-
-.gradient1 {
-  font-size: 1.5em;
-  margin: 0;
-  opacity: 0.9;
-  -ms-transform: rotate(-40deg);
-  -webkit-transform: rotate(-40deg);
-  transform: rotate(-40deg);
-}
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 1);
+.navbar-toggler {
+  border: 1px solid #ffffff;
 }
 
 .home-link {
